@@ -1,0 +1,24 @@
+{
+  "Blgos": [
+    {
+      "id": 1,
+      "title": "Welcome all to My Blogs 1",
+      "details": "  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Adipisci praesentium corrupti, sequi consequatur iure enim cupiditate corporis! Eligendi sed ea numquam possimus labore mollitia saepe ipsum, quisquam placeat cum sint omnis cumque esse! Dolor a quam quas at nihil fuga quae harum nam atque fugit? Dolorum tenetur ut, ullam dignissimos nulla placeat? Deserunt quisquam magni quibusdam vitae corporis incidunt, perferendis voluptatem ea distinctio non sit voluptates tenetur, ex magnam blanditiis aspernatur voluptatibus. Sunt facilis laudantium cupiditate, nam mollitia eum delectus sequi modi enim dignissimos tempora at temporibus voluptatem deserunt, quo, a doloremque fuga voluptas. Id sit modi dicta explicabo eos.",
+      "user": "Ahmad",
+      "tags": [
+        "one piece",
+        "Manga"
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Hello World updated  ddd",
+      "details": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Adipisci praesentium corrupti, sequi consequatur iure enim cupiditate corporis!",
+      "user": "Ahmad",
+      "tags": [
+        "One piece",
+        "anime"
+      ]
+    }
+  ]
+}
