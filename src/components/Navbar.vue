@@ -51,10 +51,10 @@
       <div class="navbar-end">
         <div class="navbar-item">
           <div class="buttons">
-            <a class="button is-primary">
-              <strong>Sign up</strong>
-            </a>
-            <a class="button is-light"> Log in </a>
+            <router-link class="button is-primary" :to="{ name: 'Signup' }">
+              Signup
+            </router-link>
+            <router-link class="" :to="{ name: 'Login' }"> Log in </router-link>
           </div>
         </div>
       </div>
@@ -63,16 +63,25 @@
 </template>
 
 <script>
+import { projectAuth } from "../firebase/config";
+
 export default {
   data() {
     return {
       isActive: false,
+      user: "",
     };
   },
   methods: {
     toggleNav() {
       this.isActive = !this.isActive;
     },
+  },
+  mounted() {
+    projectAuth.onAuthStateChanged((_user) => {
+      console.log("User state change. Current user is:", _user);
+      user.value = _user;
+    });
   },
 };
 </script>

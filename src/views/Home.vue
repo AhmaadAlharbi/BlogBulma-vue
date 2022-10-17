@@ -18,6 +18,8 @@
 <script>
 import SingleBlog from "../components/SingleBlog";
 import UpdateNotification from "../components/UpdateNotification";
+import { projectFirestore } from "../firebase/config";
+
 export default {
   components: { SingleBlog, UpdateNotification },
   data() {
@@ -26,11 +28,11 @@ export default {
       notification: false,
     };
   },
-  mounted() {
-    fetch("http://localhost:3000/Blgos")
-      .then((res) => res.json())
-      .then((data) => (this.blogs = data))
-      .catch((err) => console.log(err.message));
+  async mounted() {
+    const res = await projectFirestore.collection("blogs").get();
+    this.blogs = res.docs.map((doc) => {
+      return { ...doc.data(), id: doc.id };
+    });
   },
   methods: {
     handleDelete(id) {
